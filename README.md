@@ -1,9 +1,9 @@
-##To run the project locally
+##  How to start kukoo 🐦 (locally)
 
 First clone the repo
 
 ```
-git clone https://github.com/tstreamDOTh/kukoo/
+git clone https://github.com/tstreamDOTh/kukoo.git
 ```
 
 Then cd into the dir
