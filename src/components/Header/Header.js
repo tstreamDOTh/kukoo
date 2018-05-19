@@ -6,7 +6,18 @@ class Header extends Component {
 
 
   render() {
-    var issueButton = <div className="hamburger"><div className="fabar" /><div className="fabar" /><div className="fabar" /></div>;
+    var issueButton = <div className="flex align-center boards-bttn"><div className="hamburger ">
+      <div className="fabar" />
+      <div className="fabar" />
+      <div className="fabar" />
+    </div>
+    <div>
+      Boards
+    </div>
+    </div>
+    ;
+
+
     return (
       <div className="Header flex">
         <div className="flex-1 flex justify-start">
