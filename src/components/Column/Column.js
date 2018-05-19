@@ -6,12 +6,14 @@ import './Column.sass';
 class Column extends Component {
 
   render() {
+    let cards = this.props.cards.map((card) =>
+    <Card name={card.name} />
+  );
     
     return (
       <div className="Column">
         <p>{this.props.name}</p>
-        <Card name="Drag & Drop Issues On Safari"/>
-        <Card name="Video issues in IE"/>
+        {cards}
       </div>
     );
   }
