@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import NotificationBadge from 'react-notification-badge';
+import { Effect } from 'react-notification-badge';
+import UserAvatar from 'react-user-avatar';
 import './Header.sass';
 import '../../style/layout.sass';
 
@@ -11,11 +14,11 @@ class Header extends Component {
       <div className="fabar" />
       <div className="fabar" />
     </div>
-    <div>
-      Boards
+      <div>
+        Boards
     </div>
     </div>
-    ;
+      ;
 
 
     return (
@@ -27,7 +30,16 @@ class Header extends Component {
           <p>Logo </p>
         </div>
         <div className="flex-1 flex justify-end">
-          <p>Settings </p>
+        <div className="settings-panel" >
+            <img className="gear" src="settings.svg" />
+          </div>
+          <div className="settings-panel" >
+            <UserAvatar size="35" name="Madonna" />
+          </div>
+          <div className="settings-panel" >
+            <NotificationBadge count={4} effect={Effect.SCALE} />
+            <img className="bell" src="bell.svg" />
+          </div>
         </div>
       </div>
     );
