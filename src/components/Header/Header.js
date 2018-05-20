@@ -27,7 +27,7 @@ class Header extends Component {
           {issueButton}
         </div>
         <div className="flex-1 flex justify-center">
-          <p>Logo </p>
+          <div className="title">🐦 kukoo</div>
         </div>
         <div className="flex-1 flex justify-end">
         <div className="settings-panel" >
