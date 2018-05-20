@@ -1,17 +1,37 @@
 import React, { Component } from 'react';
+import { DragSource } from 'react-dnd';
 import './Card.sass';
 import '../../style/layout.sass';
 
-class Card extends Component {
+const ItemTypes = {
+    CARD: 'card'
+};
 
-  render() {
-    
-    return (
-      <div className="Card">
-        <div className="name">{this.props.name}</div>
-      </div>
-    );
-  }
+const cardSource = {
+    beginDrag(props) {
+        return {
+            name: props.name
+        };
+    }
+};
+
+function collect(connect, monitor) {
+    return {
+        connectDragSource: connect.dragSource(),
+        isDragging: monitor.isDragging()
+    }
 }
 
-export default Card;
+class Card extends Component {
+
+    render() {
+        const { connectDragSource, isDragging } = this.props;
+        return connectDragSource(
+            <div className="Card" style={{opacity: "isDragging ? 0.5 : 1"}}>
+                <div className="name">{this.props.name}</div>
+            </div>
+        );
+    }
+}
+
+export default DragSource(ItemTypes.CARD, cardSource, collect)(Card);

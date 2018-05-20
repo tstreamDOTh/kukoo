@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import Column from '../../components/Column/Column';
+import { DragDropContext } from 'react-dnd';
+import HTML5Backend from 'react-dnd-html5-backend';
 import '../../style/layout.sass';
 import './Board.sass';
 
@@ -20,4 +22,4 @@ class Board extends Component {
   }
 }
 
-export default Board;
+export default DragDropContext(HTML5Backend)(Board);
