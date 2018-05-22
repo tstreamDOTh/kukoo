@@ -34,10 +34,10 @@ class Header extends Component {
             <img className="gear" src="settings.svg" />
           </div>
           <div className="settings-panel" >
-            <UserAvatar size="35" name="Madonna" />
+            <UserAvatar size="35" name="Madonna" color="#51839c" />
           </div>
           <div className="settings-panel" >
-            <NotificationBadge count={4} effect={Effect.SCALE} />
+            <NotificationBadge count={4} effect={Effect.SCALE} style={{backgroundColor:"#51839c"}}/>
             <img className="bell" src="bell.svg" />
           </div>
         </div>

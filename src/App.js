@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import Header from './components/Header/Header'
 import Board from './components/Board/Board'
+import BoardList from './components/BoardList/BoardList'
 import Column from './components/Column/Column'
 import './App.sass';
 
@@ -35,7 +36,10 @@ class App extends Component {
     return (
       <div className="App">
         <Header />
-        <Board name="UI Issues" columns={columns} />
+        <div className="flex main-container align-stretch">
+          <BoardList />
+          <Board name="UI Issues" columns={columns} />
+        </div>
       </div>
     );
   }
